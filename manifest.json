@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    
+    "name": "test jep fun",
+    "description": "test jep fun",
+    "version": "1.0",
+    
+    "content_scripts": [
+        {
+            "matches": ["http://jerseyeveningpost.com/*", "http://www.jerseyeveningpost.com/*"],
+            "js": ["dropAuth.js"]
+        }
+    ]
+}
