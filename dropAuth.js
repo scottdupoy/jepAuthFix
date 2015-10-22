@@ -22,8 +22,16 @@ function jepAuthFix() {
         return;
     }
 
-    // set the style to none
+    // set the rauth-registration style to none
     console.log('jepAuthFix: switching rauth-registration display state from "' + currentDisplayState + '" to "none"');
     authElement.style.display = "none";
+    
+    // set the content height to auto    
+    var contentElements = document.getElementsByClassName("content");
+    console.log('jepAuthFix: fixing ' + contentElements.length + ' content elements');
+    for (var i = 0; i < contentElements.length; i++) {
+        contentElements[0].style.height = "auto";
+    }
+    
     console.log('jepAuthFix: finished');
 }
